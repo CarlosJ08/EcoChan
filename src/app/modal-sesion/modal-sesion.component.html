@@ -1,0 +1,35 @@
+
+<div class="mod">
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title" >Iniciar Sesion</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Correo</label>
+                <input type="email" class="form-control" id="Correo" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Contraseña</label>
+                <input type="email" class="form-control" id="Contraseña" placeholder="">
+              </div>
+              
+            </form>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="Iniciar()">Iniciar Sesion</button>
+        <button type="button" class="btn btn-outline-dark" (click)="Cerrar()">Cancelar</button>
+      </div>
+      
+    </ng-template>
+    </div>
+    <button id="btn" class="btn btn-primary" (click)="open(content)">Iniciar Sesion</button>
+    

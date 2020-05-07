@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts",
+    "src/app/Querys.ts",
+    "src/app/Conexion.ts",
+    "src/app/Rutas.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  
+  ]
+}

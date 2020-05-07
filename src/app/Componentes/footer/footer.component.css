@@ -1,0 +1,10 @@
+.card{
+    position: relative;
+    top: 15em;
+    color: white;
+    background-color:rgba(14, 14, 14, 0.87);
+    zoom:75%;
+}
+.logo{
+    width: 2.5em;
+}

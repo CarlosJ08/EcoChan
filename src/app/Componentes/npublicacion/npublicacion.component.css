@@ -1,0 +1,36 @@
+.Registro{
+  position: relative;
+  left: 25%;
+  width: 50%;
+  border-color: rgb(98, 201, 95);
+  border-style: solid;
+  padding: 3em;
+  border-radius: 1em;
+  top: 4.6em;
+}
+.logo{
+  width: 4em;
+  
+}
+#titulo{
+  position: relative;
+  left: 30%;
+}
+nav{
+  text-decoration: none;
+}
+.nav{
+  background-color: rgb(98, 201, 95);
+  text-decoration: none;
+  list-style: none;
+}
+.cater{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: 1.1em;
+}
+.letrasNav2:hover{
+ opacity: 0.5;
+ color: white;
+}

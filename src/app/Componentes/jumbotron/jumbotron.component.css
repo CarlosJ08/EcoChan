@@ -1,0 +1,62 @@
+
+
+.jumbotron{
+display: block;
+color: white;
+background-image: url("src\assets\imagenes\Fondo.jpg");
+background-repeat: no-repeat;
+background-size:100%;
+background-position-y:-10em ;
+background-attachment: scroll;
+zoom:75%;
+
+}
+.txt2{
+  font-size: 1.5em;
+}
+.txt{
+  font-size: 1.3em;
+  
+}
+
+.logo{
+    width: 3.7em;
+}
+#titulo{
+    position: relative;
+    bottom: 0.5em;
+    right: 0.4em;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+#boton{
+  position: relative;
+  left: 50%;
+  width: 50%;
+ 
+ 
+  bottom: 25em;
+ 
+}
+#btnResgistro{
+  position: relative;
+  left: 80%;
+}
+#btnIniciarSesion{
+  position: relative;
+  left: 43%;
+}
+    
+
+  
+  @keyframes slidein {
+    from {
+     opacity: 0.1;
+     margin-left: 10%;
+    }
+  
+    to {
+      opacity: 1;
+      margin-left: 0%;
+    }
+  }

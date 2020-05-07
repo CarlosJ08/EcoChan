@@ -1,0 +1,24 @@
+
+  
+ 
+.mod{
+  width: 200%;
+}
+#btn{
+  position: relative;
+  bottom: 5.5em;
+  left: 1.5em;
+}
+.modal-title{
+  position: relative;
+  left: 5em;
+ color: white;
+}
+.modal-header{
+  background-color: rgb(98, 201, 95);
+}
+.modal-content{
+border-color: tomato;
+border-width: 1em;
+}
+  
