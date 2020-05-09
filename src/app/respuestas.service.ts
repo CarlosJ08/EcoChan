@@ -16,7 +16,7 @@ export class RespuestasService {
 }
 Listar(id){
   let headers = new HttpHeaders().set('Content-Type',' application/json');
-  let param=id;
-  return this.http.get(`http://ecochan.byethost4.com/ObtenerRespuestas.php`,{headers: headers,responseType: 'json',params:param});
+  let params = new HttpParams().set("id",id);
+  return this.http.get(`http://ecochan.byethost4.com/ObtenerRespuestas.php`,{headers: headers,responseType: 'json',params:params});
 }
 }
