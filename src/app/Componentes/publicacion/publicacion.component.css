@@ -19,11 +19,30 @@
 }
 .imgUsuario{
   width: 3em;
-  height: 2.5em;
-  border-radius: 20em;
+  height:3em;
+  border-radius: 50%;
   margin-right: 0.9em ;
 }
 .card-header{
   font-size: 1.5em;
   color:  rgba(2, 7, 255, 0.534);
 }
+
+.modal-title{
+  font-size: 1.5em;
+  color: rgba(2, 7, 255, 0.534);}
+.TituloP{font-size: 0.7em;}
+.card-text{
+  max-width: 10;
+}
+.Contenido{
+  border-style: solid;
+  border-bottom: 1em;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: tomato;
+  margin-bottom: none;
+}
+
+

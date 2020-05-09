@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import { UsuariosService } from './usuarios.service';
 import { ModalSesionComponent } from './modal-sesion/modal-sesion.component';
+import { ModalPublicacionComponent } from './modal-publicacion/modal-publicacion.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ModalSesionComponent } from './modal-sesion/modal-sesion.component';
     HomeComponent,
     FooterComponent,
     ModalComponent,
-    ModalSesionComponent
+    ModalSesionComponent,
+    ModalPublicacionComponent
   ],
   imports: [
     BrowserModule,

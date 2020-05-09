@@ -27,6 +27,18 @@
             <label for="exampleFormControlTextarea1">Mensaje</label>
             <textarea class="form-control" id="Mensaje" rows="3"></textarea>
           </div>
+          <form>
+            <div class="file-field md-form">
+              <div mdbBtn color="primary" size="sm" class="waves-light" mdbWavesEffect>
+                <span>Choose file</span>
+                <input type="file" mdbFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path" type="text" placeholder="Upload your file" [value]="showFiles()">
+              </div>
+            </div>
+            <button mdbBtn color="primary" (click)="startUpload()">Start uploading</button>
+          </form>
         </form>
       </div>
     </form>
