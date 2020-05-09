@@ -1,4 +1,4 @@
-export class Usuarios{
+export class Publicaciones{
     constructor(
         public IdPublicacion:number,
         public IdUsuario:number,

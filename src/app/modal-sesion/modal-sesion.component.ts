@@ -8,11 +8,14 @@ import {UsuarioIniciado} from '../UsuarioIniciado'
   templateUrl: './modal-sesion.component.html',
   styleUrls: ['./modal-sesion.component.css']
 })
-export class ModalSesionComponent implements OnInit {
 
+export class ModalSesionComponent implements OnInit {
+  public Dat: any = null;
+  ngOnInit(): void {
+  
+  }
   constructor(private modalService: NgbModal,private service:UsuariosService) { }
   closeResult='';
-  UsuarioIniciado:Usuarios=new Usuarios(null,null,null,null,null,null);
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -22,20 +25,31 @@ export class ModalSesionComponent implements OnInit {
   }
   Iniciar()
   {
-    
+   
     var Usuario={
       Correo:(document.getElementById("Correo") as HTMLInputElement).value,
       Contrasena: (document.getElementById("Contraseña") as HTMLInputElement).value
     }
-    this.service.Sesion(Usuario).subscribe(result => Usuario= result[0]);
-    if(this.UsuarioIniciado.Nombre!=null)
+    this.service.Sesion(Usuario).subscribe(Respuesta => {this.Dat=Respuesta; console.log(Respuesta);
+      UsuarioIniciado.Usuario=new Usuarios(Number(this.Dat["idUsuario"]),this.Dat["Nombre"],this.Dat["Apellidos"],this.Dat["Correo"],this.Dat["Carrera"],this.Dat["Contrasena"]); 
+         console.log(UsuarioIniciado.Usuario);
+      console.log(UsuarioIniciado.Usuario["idUsuario"]);
+      localStorage.setItem('Sesion', JSON.stringify(UsuarioIniciado.Usuario));
+    this.Verificar();
+  });
+  
+  }
+  Verificar()
+  {
+ 
+    if(UsuarioIniciado.Usuario.idUsuario==null)
     {
-      this.modalService.dismissAll();
-      UsuarioIniciado.Usuario=this.UsuarioIniciado;
-      console.log(UsuarioIniciado.Usuario.Nombre);
+
     }
-
-
+    else{
+      this.modalService.dismissAll();
+      console.log("Usuario Iniciado:"+UsuarioIniciado.Usuario.Nombre);
+    }
   }
   Cerrar(){
     this.modalService.dismissAll();
@@ -50,7 +64,6 @@ export class ModalSesionComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-  }
+
 
 }

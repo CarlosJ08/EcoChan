@@ -2,7 +2,14 @@
   background-color: rgb(98, 201, 95);
   color: white;
   zoom:75%;
-
+  margin-top:2em;
+  position: relative;
+  bottom: 9em;
+}
+.card:hover{
+  opacity: 0.92;
+  transition: 0.7s;
+  cursor:pointer;
 }
 .card-text{
   font-size: 1.3em;

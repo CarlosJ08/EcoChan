@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders ,HttpResponse,HttpRequest,HttpHandler} from '@angular/common/http';
+import {HttpClient, HttpHeaders ,HttpResponse,HttpRequest,HttpHandler, HttpParams} from '@angular/common/http';
 import {Usuarios} from './Usuarios';
 import {environment} from '../environments/environment';
 import {Observable} from 'rxjs';
@@ -18,8 +18,11 @@ export class UsuariosService {
   constructor( private http:HttpClient) { }
 
   Sesion(Usu) {
+    var Dat=null;
+    let headers = new HttpHeaders().set('Content-Type',' application/json');
+    let params = new HttpParams().set("Correo",Usu.Correo).set("Contrasena", Usu.Contrasena);
+    return this.http.get(`http://ecochan.byethost4.com/Sesion.php`,{headers: headers, params:params,responseType: 'json'});
     
-    return this.http.get(`http://ecochan.byethost4.com/Sesion.php?Correo=${Usu.Correo},Contrasena=${Usu.Contraseña}`);
   }
   recuperarTodos() {
     return this.http.get(`http://ecochan.byethost4.com/recuperartodos.php`);
@@ -28,13 +31,10 @@ export class UsuariosService {
     let json = JSON.stringify(Usuario);
     console.log(json);
     
-    let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+    let headers = new HttpHeaders().set('Content-Type',' application/json');
              
     return this.http.post(`http://ecochan.byethost4.com/Agregar.php`, json, {headers: headers,responseType: 'text'});
-    
-   
- 
-}
+  }
 }
    
   

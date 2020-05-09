@@ -1,11 +1,11 @@
 export class Usuarios{
     constructor(
-        public IdUsuario:number,
+        public idUsuario:number,
         public Nombre:String,
         public Apellidos:string,
         public Correo:String,
         public Carrera:String,
-        public Contraseña:String
+        public Contrasena:String
  
     ){}
 }

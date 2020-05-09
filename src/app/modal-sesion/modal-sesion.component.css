@@ -1,0 +1,16 @@
+body{
+    overflow: hidden;
+}
+.Botones{
+    position: relative;
+    left: 80%;
+    padding:none;
+    margin:none;
+    width: 16em;
+    bottom:25em;
+    zoom:110%;
+}
+.Botones button{
+   margin: 0.5em;
+  
+}
