@@ -14,10 +14,12 @@ export class PublicacionComponent implements OnInit {
   lista:any;
 @Input()item:Publicaciones;
 Recortado:String='';
+idPub:number;
  Respuesta:Respuestas;
   constructor(private modalService: NgbModal, private service:RespuestasService){}
     ngOnInit(): void {
-   
+     var a:String=String(this.item["idPublicacion"]);
+     console.log(a);
 this.Recortado=this.item.Mensaje;
 if(this.Recortado.length>15){
   this.Recortado=this.Recortado.substring(0,100)+"...";
@@ -30,12 +32,14 @@ if(this.Recortado.length>15){
   }
 
   Responder() {
-    this.Respuesta= new Respuestas(1,this.item.IdPublicacion,UsuarioIniciado.Usuario.idUsuario,(document.getElementById("Mensaje") as HTMLInputElement).value,UsuarioIniciado.Usuario.Nombre+" "+ UsuarioIniciado.Usuario.Apellidos,null);
+    console.log(this.item);
+    this.Respuesta= new Respuestas(1,Number(this.item["idPublicacion"]),UsuarioIniciado.Usuario.idUsuario,(document.getElementById("Mensaje") as HTMLInputElement).value,UsuarioIniciado.Usuario.Nombre+" "+ UsuarioIniciado.Usuario.Apellidos,null);
+    console.log(this.Respuesta);
     this.service.Responder(this.Respuesta).subscribe(datos => {
       this.Listar();
     });}
 
     Listar(){
-      this.service.Listar(this.item.IdPublicacion).subscribe(Respuesta => {this.lista=Respuesta; console.log(Respuesta);$( "#ListaRes" ).load(window.location.href + " #ListaRes" );})
+      this.service.Listar(String(this.item["idPublicacion"])).subscribe(Respuest => {this.lista=Respuest; console.log(Respuest);$( "#ListaRes" ).load(window.location.href + " #ListaRes" );})
 }
 }

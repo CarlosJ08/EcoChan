@@ -31,7 +31,17 @@
       
     </ng-template>
     </div>
-    <div class="Botones">
+    <div class="Botones" id="Botones">
     <button id="btn" class="btn btn-success" (click)="open(content)">Iniciar Sesion</button>
-    <button type="button" id="btnResgistro" [routerLink]="['/Registro']" routerLinkActive="router-link-active" class="btn btn-success">Registrarse</button>
+    <button type="button" id="btnRegistro" [routerLink]="['/Registro']" routerLinkActive="router-link-active" class="btn btn-success">Registrarse</button>
+    <div class="row">
+      <div class="col">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{txt}}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Cerrar Sesion</button>
+          
+          </div>
+        </div>
+      </div>
     <div>

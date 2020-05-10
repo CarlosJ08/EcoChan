@@ -3,7 +3,7 @@ body{
 }
 .Botones{
     position: relative;
-    left: 80%;
+    left: 76%;
     padding:none;
     margin:none;
     width: 16em;
@@ -12,5 +12,11 @@ body{
 }
 .Botones button{
    margin: 0.5em;
+
   
+}
+.row{
+    z-index: 4;
+    position: relative;
+    bottom:3.3em;
 }

@@ -11,10 +11,22 @@ import {UsuarioIniciado} from '../UsuarioIniciado'
 
 export class ModalSesionComponent implements OnInit {
   public Dat: any = null;
+  txt:String='';
   ngOnInit(): void {
-  
+    
+    if(UsuarioIniciado.Usuario==null)
+    {
+      document.getElementById("btn").setAttribute("style","display:inline-block");
+      document.getElementById("btnRegistro").setAttribute("style","display:inline-block");
+    }else{
+        document.getElementById("btn").setAttribute("style","display:none");
+        document.getElementById("btnRegistro").setAttribute("style","display:none");
+        this.txt=UsuarioIniciado.Usuario.Nombre;
+    }
   }
-  constructor(private modalService: NgbModal,private service:UsuariosService) { }
+  constructor(private modalService: NgbModal,private service:UsuariosService) {
+    
+   }
   closeResult='';
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -47,6 +59,7 @@ export class ModalSesionComponent implements OnInit {
 
     }
     else{
+      document.getElementById("btnRegistro").style.transform="display:none";
       this.modalService.dismissAll();
       console.log("Usuario Iniciado:"+UsuarioIniciado.Usuario.Nombre);
     }

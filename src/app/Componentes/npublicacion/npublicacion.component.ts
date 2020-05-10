@@ -3,6 +3,7 @@ import {Usuarios} from '../../Usuarios';
 import {UsuariosService} from '../../usuarios.service';
 import {UsuarioIniciado} from '../../UsuarioIniciado';
 import { HttpClient } from '@angular/common/http';
+
 declare function require(name:string);
 var Query= require('../../Querys');
 @Component({
@@ -17,7 +18,7 @@ Usuario:Usuarios;
  
 
   ngOnInit(): void {
-   
+  
   }
   
   recuperarTodos() {

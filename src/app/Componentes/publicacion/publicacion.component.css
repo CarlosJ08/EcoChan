@@ -44,5 +44,7 @@
   border-color: tomato;
   margin-bottom: none;
 }
-
+#ListaRes{
+  transition: 1s;
+}
 
