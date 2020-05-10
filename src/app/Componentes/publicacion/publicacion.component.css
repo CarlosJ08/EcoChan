@@ -5,6 +5,8 @@
   margin-top:2em;
   position: relative;
   bottom: 9em;
+  animation-name: slidein;
+  animation-duration:2s;
 }
 .card:hover{
   opacity: 0.92;
@@ -46,5 +48,16 @@
 }
 #ListaRes{
   transition: 1s;
+}
+@keyframes slidein {
+  from {
+   opacity: 0.1;
+   margin-left: 10%;
+  }
+
+  to {
+    opacity: 1;
+    margin-left: 0%;
+  }
 }
 

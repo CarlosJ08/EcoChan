@@ -30,8 +30,10 @@
           
         </form>
       </div>
-    </form>
+    </form>  
+    <p id="Advertencia">¡Tienes que llenar todos los campos!</p>
   </div>
+
   <div class="modal-footer">
     <button type="button" class="btn btn-success" (click)="Publicar()">Publicar</button>
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Cancelar</button>
@@ -39,4 +41,6 @@
   
 </ng-template>
 </div>
-<button id="btn" class="btn btn-primary" (click)="open(content)">Crear Publicacion</button>
+
+<button id="btnP" class="btn btn-primary" (click)="open(content)">Crear Publicacion</button>
+

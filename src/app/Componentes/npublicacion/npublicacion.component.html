@@ -3,7 +3,7 @@
    
 <div class="letrasNav2">
 <ul class="cater">
-    <li><a class="cater" routerLink="">Inicio</a></li>
+    <li><a class="cater" routerLink=""><img class="logo" src="assets/imagenes/EcoChanIcono.png"><b>Ecochan</b></a></li>
 
 </ul>
 </div>
@@ -38,9 +38,23 @@
         <input type="email" class="form-control" id="Carrera" aria-describedby="emailHelp">
        
       </div>
-      
+      <form [formGroup]="radioGroupForm">
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="model">
+          <label ngbButtonLabel class="btn-primary">
+            <input ngbButton type="radio" [value]="1"> Left (pre-checked)
+          </label>
+          <label ngbButtonLabel class="btn-primary">
+            <input ngbButton type="radio" value="middle"> Middle
+          </label>
+          <label ngbButtonLabel class="btn-primary">
+            <input ngbButton type="radio" [value]="false"> Right
+          </label>
+        </div>
+      </form>
+      <p id="Advertencia">¡Tienes que llenar todos los campos!</p>
+  
     
-    <button id="btnRegistro" type="submit" (click)="alta()" class="btn btn-primary">Registrarse</button>
+    <button id="btnRegistro" [routerLink]="[txt]" type="submit" (click)="alta()" class="btn btn-primary">Registrarse</button>
   </form>
 
   <app-footer></app-footer>

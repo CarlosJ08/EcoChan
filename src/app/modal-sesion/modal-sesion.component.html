@@ -17,9 +17,9 @@
               </div>
               <div class="form-group">
                 <label for="exampleFormControlInput1">Contraseña</label>
-                <input type="email" class="form-control" id="Contraseña" placeholder="">
+                <input type="password" class="form-control" id="Contraseña" placeholder="">
               </div>
-              
+              <p id="valid">ID o Contraseña incorrectos</p>
             </form>
           </div>
         </form>
@@ -32,16 +32,19 @@
     </ng-template>
     </div>
     <div class="Botones" id="Botones">
-    <button id="btn" class="btn btn-success" (click)="open(content)">Iniciar Sesion</button>
+    <button id="btnI" class="btn btn-success" (click)="open(content)">Iniciar Sesion</button>
     <button type="button" id="btnRegistro" [routerLink]="['/Registro']" routerLinkActive="router-link-active" class="btn btn-success">Registrarse</button>
-    <div class="row">
+   
+    
+    <div id="UsIniciado" class="row">
       <div class="col">
         <div ngbDropdown class="d-inline-block">
-          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{txt}}</button>
+          <button class="btn btn-success" id="dropdownBasic1" ngbDropdownToggle>{{txt}}</button>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem>Cerrar Sesion</button>
+            <button (click)="CerrarSesion()" ngbDropdownItem>Cerrar Sesion</button>
           
           </div>
         </div>
       </div>
-    <div>
+ </div>
+ </div>

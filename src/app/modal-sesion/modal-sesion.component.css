@@ -7,7 +7,7 @@ body{
     padding:none;
     margin:none;
     width: 16em;
-    bottom:25em;
+    bottom:23em;
     zoom:110%;
 }
 .Botones button{
@@ -18,5 +18,13 @@ body{
 .row{
     z-index: 4;
     position: relative;
-    bottom:3.3em;
+    top:1em;
+}
+.UsIniciado{
+    position: relative;
+    left:2em;
+}
+.valid{
+    display:none;
+    color:red;
 }

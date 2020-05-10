@@ -4,10 +4,11 @@
 .mod{
   width: 200%;
 }
-#btn{
+#btnP{
   position: relative;
   bottom: 5.5em;
   left: 1.5em;
+  display:none;
 }
 .modal-title{
   position: relative;
@@ -21,4 +22,9 @@
 border-color: tomato;
 border-width: 1em;
 }
+#Advertencia{
+  color: red;
+  display: none;
+}
+
   

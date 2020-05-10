@@ -7,7 +7,7 @@
 
   $registros=mysql_query($con,"select * from Usuarios");
   $vec=[];  
-  while ($reg=mysql_fetch_array($registros))  
+  while ($reg=mysql_fetch_array($registros,M))  
   {
     $vec[]=$reg;
   }

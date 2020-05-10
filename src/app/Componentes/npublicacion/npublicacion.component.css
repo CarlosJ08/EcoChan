@@ -31,6 +31,26 @@ nav{
   font-size: 1.1em;
 }
 .letrasNav2:hover{
- opacity: 0.5;
+ opacity: 0.6;
+ transition: 1s;
  color: white;
+ 
+}
+#Advertencia{
+  color: red;
+  display: none;
+  
+}
+.logo{
+  width: 2.5em;
+}
+.cater{
+  position: relative;
+  right: 0.5em;
+}
+.letrasNav2{
+  position: relative;
+ left:1em;
+ top:0.55em;
+ cursor: pointer;
 }

@@ -1,19 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import {Publicaciones} from '../Publicaciones';
+import { Publicaciones } from '../Publicaciones';
 @Component({
   selector: 'app-modal-publicacion',
   templateUrl: './modal-publicacion.component.html',
   styleUrls: ['./modal-publicacion.component.css']
 })
 export class ModalPublicacionComponent implements OnInit {
-@Input() itemm:Publicaciones;
+  @Input() itemm: Publicaciones;
   closeResult: string;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) { }
 
   openBackDropCustomClass(content) {
-    this.modalService.open(content, {backdropClass: 'light-blue-backdrop'});
+    this.modalService.open(content, { backdropClass: 'light-blue-backdrop' });
   }
 
   openWindowCustomClass(content) {
