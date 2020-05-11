@@ -36,11 +36,18 @@ nav{
  color: white;
  
 }
-#Advertencia{
+#Advertencia {
   color: red;
   display: none;
   
 }
+#Advertencia2{
+  
+    color: red;
+    display: none;
+    
+  }
+
 .logo{
   width: 2.5em;
 }

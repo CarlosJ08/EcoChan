@@ -35,7 +35,8 @@ model=1;
   
   var imagen:String="";
  
-    if ((document.getElementById("Nombre") as HTMLInputElement).value == '' || (document.getElementById("Apellidos") as HTMLInputElement).value == '' || (document.getElementById("Correo") as HTMLInputElement).value == '') { document.getElementById("Advertencia").setAttribute("style", "display:flex"); }
+    if ((document.getElementById("Nombre") as HTMLInputElement).value == '' || (document.getElementById("Apellidos") as HTMLInputElement).value == '' || (document.getElementById("Correo") as HTMLInputElement).value == '' ) { document.getElementById("Advertencia").setAttribute("style", "display:flex"); }
+    else if(validaNumericos()){document.getElementById("Advertencia2").setAttribute("style", "display:flex"); }
     else {
       if((document.getElementById("r1") as HTMLInputElement).checked){imagen="Zopilote.jpg"}
       if((document.getElementById("r2") as HTMLInputElement).checked){imagen="gruya.jpg"}
@@ -49,6 +50,18 @@ model=1;
       });
       
     }
+    function validaNumericos(){
+      var inputtxt = document.getElementById('Correo') as HTMLInputElement; 
+      var valor = inputtxt.value;
+      for(var i=0;i<valor.length;i++){
+          var code=valor.charCodeAt(i);
+              if(code<48 || code>57){          
+                 
+                return true;
+              }    
+        }
+       
+     }
   }
  
 }

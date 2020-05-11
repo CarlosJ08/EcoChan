@@ -12,7 +12,8 @@
 }
 .modal-title{
   position: relative;
-  left: 5em;
+  
+  left: 40%;
  color: white;
 }
 .modal-header{

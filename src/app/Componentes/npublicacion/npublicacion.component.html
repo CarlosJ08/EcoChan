@@ -16,27 +16,30 @@
     <h5 class="card-title" id="titulo"><img class="logo" src="assets/imagenes/EcoChanIcono.png"> ECOCHAN</h5>
     <div class="form-group">
       <label for="exampleInputEmail1">ID</label>
-      <input type="email" class="form-control" id="Correo" aria-describedby="emailHelp">
-     
+      <input maxlength="50" type="email" class="form-control" id="Correo" aria-describedby="emailHelp">
+      <p id="Advertencia2">No puedes introducir letras</p>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Contraseña</label>
-      <input type="password" class="form-control" id="Contraseña">
+      <input maxlength="20" type="password" class="form-control" id="Contraseña">
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Nombre</label>
-        <input type="email" class="form-control" id="Nombre" aria-describedby="emailHelp">
+        <input maxlength="50" type="email" class="form-control" id="Nombre" aria-describedby="emailHelp">
        
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Apellidos</label>
-        <input type="email" class="form-control" id="Apellidos" aria-describedby="emailHelp">
+        <input type="email" maxlength="50" class="form-control" id="Apellidos" aria-describedby="emailHelp">
        
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Carrera</label>
-        <input type="email" class="form-control" id="Carrera" aria-describedby="emailHelp">
-       
+        <label for="exampleFormControlSelect1">Sección</label>
+        <select class="form-control" id="Carrera">
+          <option>ISW</option>
+          <option>LPS</option>
+          <option>LCEF</option>
+        </select>
       </div>
       <label for="exampleInputEmail1">Imagen de Perfil</label>
       <div></div>
