@@ -16,6 +16,7 @@ export class PublicacionComponent implements OnInit {
   Recortado: String = '';
   idPub: number;
   Respuesta: Respuestas;
+
   constructor(private modalService: NgbModal, private service: RespuestasService) { }
   ngOnInit(): void {
   
@@ -44,10 +45,11 @@ export class PublicacionComponent implements OnInit {
   Responder() {
     if((document.getElementById("Mensaje") as HTMLInputElement).value==''){}
     else{
-    this.Respuesta = new Respuestas(1, Number(this.item["idPublicacion"]), UsuarioIniciado.Usuario.idUsuario, (document.getElementById("Mensaje") as HTMLInputElement).value, UsuarioIniciado.Usuario.Nombre + " " + UsuarioIniciado.Usuario.Apellidos, null);
+    this.Respuesta = new Respuestas(1, Number(this.item["idPublicacion"]), UsuarioIniciado.Usuario.idUsuario, (document.getElementById("Mensaje") as HTMLInputElement).value, UsuarioIniciado.Usuario.Nombre + " " + UsuarioIniciado.Usuario.Apellidos, null,UsuarioIniciado.Usuario.Imagen);
     console.log(this.Respuesta);
     this.service.Responder(this.Respuesta).subscribe(datos => {
       this.Listar();
+      (document.getElementById("Mensaje") as HTMLInputElement).value==''
     });
   }
   }

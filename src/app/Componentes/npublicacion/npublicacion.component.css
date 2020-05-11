@@ -14,7 +14,7 @@
 }
 #titulo{
   position: relative;
-  left: 30%;
+  left: 35%;
 }
 nav{
   text-decoration: none;
@@ -53,4 +53,17 @@ nav{
  left:1em;
  top:0.55em;
  cursor: pointer;
+}
+#imgs{
+
+ 
+  display: flex;
+  align-items: center;
+  width: 3em;
+
+  height: 3em;
+  border-radius:50%;
+}
+#espacio{
+  height: 1em;
 }

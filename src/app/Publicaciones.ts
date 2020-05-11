@@ -5,7 +5,8 @@ export class Publicaciones{
         public Titulo:String,
         public Mensaje:string,
         public Autor:String,
-        public Categoria:String
+        public Categoria:String,
+        public ImagenUsuario:String
         
  
     ){}

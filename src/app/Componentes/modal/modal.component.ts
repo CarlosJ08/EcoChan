@@ -32,7 +32,7 @@ Esconder()
       document.getElementById("Advertencia").setAttribute("style", "display:inline-block");
     }
     else {
-      this.Publicacion = new Publicaciones(1, UsuarioIniciado.Usuario.idUsuario, (document.getElementById("Titulo") as HTMLInputElement).value, (document.getElementById("Mensaje") as HTMLInputElement).value, UsuarioIniciado.Usuario.Nombre + " " + UsuarioIniciado.Usuario.Apellidos, (document.getElementById("Categoria") as HTMLInputElement).value);
+      this.Publicacion = new Publicaciones(1, UsuarioIniciado.Usuario.idUsuario, (document.getElementById("Titulo") as HTMLInputElement).value, (document.getElementById("Mensaje") as HTMLInputElement).value, UsuarioIniciado.Usuario.Nombre + " " + UsuarioIniciado.Usuario.Apellidos, (document.getElementById("Categoria") as HTMLInputElement).value,UsuarioIniciado.Usuario.Imagen);
       this.service.AgregarPublicacion(this.Publicacion).subscribe(datos => {
         if (datos == null) {
 
@@ -47,7 +47,8 @@ Esconder()
 
 
   open(content) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+    
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title',size: 'xl' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;

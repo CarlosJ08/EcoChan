@@ -5,7 +5,8 @@ export class Usuarios{
         public Apellidos:string,
         public Correo:String,
         public Carrera:String,
-        public Contrasena:String
+        public Contrasena:String,
+        public Imagen:String
  
     ){}
 }

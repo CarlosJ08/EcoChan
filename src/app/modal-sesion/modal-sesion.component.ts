@@ -13,6 +13,7 @@ import {HomeComponent} from '../Componentes/home/home.component';
 export class ModalSesionComponent implements OnInit {
   public Dat: any = null;
   txt: String = '';
+  im:String='';
   ngOnInit(): void {
 
     if (UsuarioIniciado.Usuario == null) {
@@ -24,6 +25,7 @@ export class ModalSesionComponent implements OnInit {
       document.getElementById("btnRegistro").setAttribute("style", "display:none");
       document.getElementById("UsIniciado").setAttribute("style", "display:inline-block");
       this.txt = UsuarioIniciado.Usuario.Nombre;
+      this.im=UsuarioIniciado.Usuario.Imagen;
     }
   }
   constructor(private modalService: NgbModal, private service: UsuariosService, private home:HomeComponent) {
@@ -38,7 +40,7 @@ export class ModalSesionComponent implements OnInit {
     });
   }
   Iniciar() {
-    if((document.getElementById("Correo") as HTMLInputElement).value.trim()==''|| (document.getElementById("Contraseña") as HTMLInputElement).value.trim()==''){}
+    if((document.getElementById("Correo") as HTMLInputElement).value.trim()==''|| (document.getElementById("Contraseña") as HTMLInputElement).value.trim()==''){  document.getElementById("valid").setAttribute("style", "display:inline-block");}
     else{
     var Usuario = {
       Correo: (document.getElementById("Correo") as HTMLInputElement).value,
@@ -46,7 +48,7 @@ export class ModalSesionComponent implements OnInit {
     }
     this.service.Sesion(Usuario).subscribe(Respuesta => {
     this.Dat = Respuesta; console.log(Respuesta);
-      UsuarioIniciado.Usuario = new Usuarios(Number(this.Dat["idUsuario"]), this.Dat["Nombre"], this.Dat["Apellidos"], this.Dat["Correo"], this.Dat["Carrera"], this.Dat["Contrasena"]);
+      UsuarioIniciado.Usuario = new Usuarios(Number(this.Dat["idUsuario"]), this.Dat["Nombre"], this.Dat["Apellidos"], this.Dat["Correo"], this.Dat["Carrera"], this.Dat["Contrasena"], this.Dat["Imagen"]);
       console.log(UsuarioIniciado.Usuario);
       console.log(UsuarioIniciado.Usuario["idUsuario"]);
       localStorage.setItem('Sesion', JSON.stringify(UsuarioIniciado.Usuario));

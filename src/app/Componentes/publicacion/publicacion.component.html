@@ -1,5 +1,5 @@
 <div (click)="openScrollableContent(longContent)" class="card">
-  <h5 class="card-header"><img class="imgUsuario" src="assets/imagenes/Zopilote.jpg">{{item.Autor}} </h5>
+  <h5 class="card-header"><img class="imgUsuario" src="assets/imagenes/{{item.ImagenUsuario}}">{{item.Autor}} </h5>
   <div class="card-body">
     <h5 class="card-title">{{item.Titulo}}</h5>
     <p class="card-text">{{Recortado}}</p>
@@ -10,7 +10,7 @@
 <ng-template  #longContent let-modal>
   
   <div class="modal-header">
-    <h4 class="modal-title"><img class="imgUsuario" src="assets/imagenes/Zopilote.jpg">{{item.Autor}}</h4>
+    <h4 class="modal-title"><img class="imgUsuario" src="assets/imagenes/{{item.ImagenUsuario}}">{{item.Autor}}</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>

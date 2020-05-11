@@ -38,23 +38,25 @@
         <input type="email" class="form-control" id="Carrera" aria-describedby="emailHelp">
        
       </div>
-      <form [formGroup]="radioGroupForm">
-        <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="model">
-          <label ngbButtonLabel class="btn-primary">
-            <input ngbButton type="radio" [value]="1"> Left (pre-checked)
-          </label>
-          <label ngbButtonLabel class="btn-primary">
-            <input ngbButton type="radio" value="middle"> Middle
-          </label>
-          <label ngbButtonLabel class="btn-primary">
-            <input ngbButton type="radio" [value]="false"> Right
-          </label>
-        </div>
-      </form>
-      <p id="Advertencia">¡Tienes que llenar todos los campos!</p>
-  
+      <label for="exampleInputEmail1">Imagen de Perfil</label>
+      <div></div>
+      <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
+        <label ngbButtonLabel class="btn-primary">
+          <input id="r1"  ngbButton type="radio" [value]="1"><img id="imgs" src="../../../assets/imagenes/Zopilote.jpg"> 
+        </label>
+        <label ngbButtonLabel class="btn-primary">
+          <input id="r2" ngbButton type="radio" value="middle"><img id="imgs" src="../../../assets/imagenes/gruya.jpg"> 
+        </label>
+        <label ngbButtonLabel class="btn-primary">
+          <input id="r3" ngbButton type="radio" [value]="false"> <img id="imgs" src="../../../assets/imagenes/arbol.jpg"> 
+        </label>
+      </div>
+      <div id="espacio"></div>
     
-    <button id="btnRegistro" [routerLink]="[txt]" type="submit" (click)="alta()" class="btn btn-primary">Registrarse</button>
+    <p id="Advertencia">¡Tienes que llenar todos los campos!</p>
+<button id="btnRegistro"  type="submit" (click)="alta()" class="btn btn-primary">Registrarse</button>
   </form>
+  
 
+  
   <app-footer></app-footer>

@@ -16,15 +16,52 @@ body{
   
 }
 .row{
-    z-index: 4;
+   
     position: relative;
-    top:1em;
+  
 }
 .UsIniciado{
     position: relative;
     left:2em;
+  
+    z-index:4;
+  
 }
-.valid{
+#valid{
     display:none;
     color:red;
+}
+#imgs{
+
+ position: relative;
+ left: 3em;
+ top:0.25em;
+    display: flex;
+    align-items: center;
+    width: 2.2em;
+  
+    height: 2.2em;
+    border-radius:50%;
+  
+  }
+.imU{
+    position: relative;
+    top:2.5em;
+}
+.Us{
+    position: relative;
+    bottom: 1em;
+    
+
+}
+#dropdownBasic1
+{
+    text-align: center;
+}
+
+#adap{
+    width: 12em;
+    height: 5em;
+    position: relative;
+    bottom:3.4em;
 }

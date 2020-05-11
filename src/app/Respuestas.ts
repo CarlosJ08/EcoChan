@@ -5,7 +5,8 @@ export class Respuestas{
         public IdUsuario:number,
         public Mensaje:string,
         public Autor:String,
-        public Fecha:any
+        public Fecha:any,
+        public ImagenUsuario:String
         
  
     ){}
