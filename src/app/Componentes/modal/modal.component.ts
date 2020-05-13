@@ -4,6 +4,7 @@ import { Publicaciones } from '../../Publicaciones';
 import { UsuarioIniciado } from 'src/app/UsuarioIniciado';
 import { PublicacionService } from '../../publicacion.service'
 import { HomeComponent } from '../home/home.component';
+import { appendFile } from 'fs';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -13,7 +14,8 @@ export class ModalComponent implements OnInit {
   Publicacion: Publicaciones;
   constructor(private modalService: NgbModal, private service: PublicacionService, private Home: HomeComponent) { }
   closeResult = '';
-
+  selectedFile: File;
+   base64textString:String;
 Esconder()
 {
  
@@ -27,6 +29,8 @@ Esconder()
         document.getElementById("btnP").setAttribute("style", "display:inline-block");
       }
   }
+
+
   Publicar() {
     if ((document.getElementById("Titulo") as HTMLInputElement).value == '' || (document.getElementById("Mensaje") as HTMLInputElement).value == '') {
       document.getElementById("Advertencia").setAttribute("style", "display:inline-block");

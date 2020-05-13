@@ -58,7 +58,7 @@ export class ModalSesionComponent implements OnInit {
   }
   Verificar() {
 
-    if (UsuarioIniciado.Usuario.idUsuario == null) {
+    if (UsuarioIniciado.Usuario == null) {
       document.getElementById("valid").setAttribute("style", "display:inline-block");
     }
     else {

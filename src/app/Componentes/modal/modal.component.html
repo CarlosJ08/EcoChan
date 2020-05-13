@@ -1,46 +1,44 @@
-
 <div class="mod">
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title" >Nueva Publicacion</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <form>
-      <div class="form-group">
-        <form>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Titulo</label>
-            <input type="email" class="form-control" id="Titulo" placeholder="">
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Sección</label>
-            <select class="form-control" id="Categoria">
-              <option>Informativo</option>
-              <option>Discusión</option>
-            </select>
-          </div>
-      
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Mensaje</label>
-            <textarea class="form-control" id="Mensaje" rows="3"></textarea>
-          </div>
-          
-        </form>
-      </div>
-    </form>  
-    <p id="Advertencia">¡Tienes que llenar todos los campos!</p>
-  </div>
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Nueva Publicacion</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Titulo</label>
+              <input type="email" class="form-control" id="Titulo" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Sección</label>
+              <select class="form-control" id="Categoria">
+                <option>Informativo</option>
+                <option>Discusión</option>
+              </select>
+            </div>
 
-  <div class="modal-footer">
-    <button type="button" class="btn btn-success" (click)="Publicar()">Publicar</button>
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Cancelar</button>
-  </div>
-  
-</ng-template>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Mensaje</label>
+              <textarea class="form-control" id="Mensaje" rows="3"></textarea>
+            </div>
+
+          </form>
+        </div>
+      </form>
+      <p id="Advertencia">¡Tienes que llenar todos los campos!</p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="Publicar()">Publicar</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Cancelar</button>
+    </div>
+
+  </ng-template>
 </div>
 
 <button id="btnP" class="btn btn-primary" (click)="open(content)">Crear Publicacion</button>
-

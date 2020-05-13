@@ -1,12 +1,12 @@
 .card{
-  background-color: rgb(98, 201, 95);
+  background-color: #e8e8e8;
   color: white;
   zoom:75%;
   margin-top:2em;
   position: relative;
-  bottom: 7.7em;
+  bottom: 7.9em;
   animation-name: slidein;
-  animation-duration:3s;
+  animation-duration:1.2s;
 }
 .card:hover{
   opacity: 0.92;
@@ -15,9 +15,11 @@
 }
 .card-text{
   font-size: 1.3em;
+  color:black;
 }
 .card-title{
   font-size: 1.6em;
+  color:#1e6d2b;
 }
 .imgUsuario{
   width: 3em;
@@ -28,12 +30,14 @@
 .card-header{
   font-size: 1.5em;
   color:  rgba(2, 7, 255, 0.534);
+  background-color:rgb(98, 201, 95);
 }
 
 .modal-title{
-  font-size: 1.5em;
+  font-size: 1.6em;
   color: rgba(2, 7, 255, 0.534);}
-.TituloP{font-size: 0.7em;}
+.TituloP{font-size: 0.68em;
+color:#2a2b44}
 .card-text{
   max-width: 10;
 }
@@ -48,6 +52,10 @@
 }
 #ListaRes{
   transition: 1s;
+}
+.tituloCarta{
+  color: #2a2b44;
+
 }
 @keyframes slidein {
   from {
